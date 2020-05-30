@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Form from '../components/Form'
 
 export default function Home() {
   return (
@@ -9,37 +10,7 @@ export default function Home() {
       </Head>
 
       <main>
-      <div className='form-container'> 
-        <div className='inner-wrapper'>
-          <h1> Create Your Account </h1>
-          <form action="">
-            <div>
-                <label htmlFor="company-name">Company Name</label>
-                <input type="text" name='company-name' />
-            </div>
-              <div>
-                <label htmlFor="your-name">Your Name</label>
-                <input type="text" name='your-name' />
-              </div>
-              <div>
-                <label htmlFor="email-address">Email Address</label>
-                <input type="text" name='email-address' />
-              </div>
-              <div>
-                <label htmlFor="password">Password</label>
-                <input type="password" name='password' />
-              </div>
-              <div>
-                <label htmlFor="register-checkbox">To register with us please tick to agree to our <a>Terms and conditions</a></label>
-                <input type="checkbox" name="register-checkbox" />
-              </div>   
-              <button className='button'>Register</button> 
-          </form>
-          <div>
-            <p>Already have an account? <a href="">Sign in</a> </p>
-          </div>
-        </div>
-      </div>
+        <Form />
       </main>
 
       <style jsx>{`
@@ -52,10 +23,6 @@ export default function Home() {
           align-items: center;
         }
 
-        .form-container {
-          max-width: 760px;
-          border: thin solid red;
-        }
         main {
           padding: 5rem 0;
           flex: 1;
@@ -63,6 +30,7 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          width: 50%;
         }
 
         footer {
@@ -85,7 +53,6 @@ export default function Home() {
         }
 
         a {
-          color: inherit;
           text-decoration: none;
         }
 
@@ -185,6 +152,7 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
+            font-size: 10px;
         }
 
         * {
